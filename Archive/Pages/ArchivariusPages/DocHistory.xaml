@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Archive.Pages.ArchivariusPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="DocHistory">
+      Title="История документа">
 
     <Grid>
         <Grid.RowDefinitions>
