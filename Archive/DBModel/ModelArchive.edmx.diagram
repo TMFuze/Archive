@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="31202d8fca94479c851e989bd54a0eb7" Name="Diagram1">
+        <EntityTypeShape EntityType="ArchiveModel.Department" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchiveModel.DocHistory" Width="1.5" PointX="7.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchiveModel.Document" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchiveModel.MnemonicCode" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchiveModel.Role" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchiveModel.Status" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchiveModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchiveModel.Type" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArchiveModel.User" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="ArchiveModel.FK_MnemonicCode_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchiveModel.FK_User_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchiveModel.FK_DocHistory_Document" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchiveModel.FK_DocHistory_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchiveModel.FK_Document_MnemonicCode" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchiveModel.FK_Document_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchiveModel.FK_Document_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="ArchiveModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
