@@ -73,6 +73,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppFiles\DBConnect.cs" />
+    <Compile Include="AppFiles\EditDataObject.cs" />
     <Compile Include="AppFiles\FrameApp.cs" />
     <Compile Include="DBModel\Department.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
@@ -132,6 +133,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ArchivariusPages\EditFilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Authorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -150,6 +155,9 @@
     </Compile>
     <Compile Include="Pages\ArchivariusPages\DocHistory.xaml.cs">
       <DependentUpon>DocHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ArchivariusPages\EditFilePage.xaml.cs">
+      <DependentUpon>EditFilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>

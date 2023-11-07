@@ -197,5 +197,26 @@ namespace Archive.Pages.ArchivariusPages
                 }
             }
         }
+
+        
+
+        private void ClearAllItems_Click(object sender, RoutedEventArgs e)
+        {
+            // Очистка текстовых полей
+            DocumentNumber.Clear();
+            StorageNumber.Clear();
+            Cabinet.Clear();
+            Folder.Clear();
+            PersonName.Clear();
+            RelatedContract.Clear();
+
+            // Сброс значения DatePicker
+            DocumentDate.SelectedDate = null;
+
+            // Сброс значения ComboBox
+            DocumentType.SelectedIndex = -1;
+            MnemonicCode.SelectedIndex = -1;
+            DocumentStatus.SelectedIndex = -1;
+        }
     }
 }

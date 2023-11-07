@@ -22,7 +22,7 @@ namespace Archive.Pages.ArchivariusPages
     /// </summary>
     public partial class ArchFilesPage : Page
     {
-
+        private Document selectedDoc;
         private List<Document> allItems;
         public ArchFilesPage()
         {
@@ -135,7 +135,21 @@ namespace Archive.Pages.ArchivariusPages
 
         private void HistoryGo_Click(object sender, RoutedEventArgs e)
         {
+            FrameApp.frmObj.Navigate(new DocHistory());
+        }
 
+        private void ChangeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (selectedDoc != null)
+            {
+                EditFilePage editPage = new EditFilePage(selectedDoc);
+                FrameApp.frmObj.Navigate(editPage);
+            }
+        }
+
+        private void DGItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectedDoc = (Document)DGItems.SelectedItem;
         }
     }
 }

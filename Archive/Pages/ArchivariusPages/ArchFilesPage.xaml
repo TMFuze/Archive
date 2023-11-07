@@ -28,7 +28,8 @@
             <DataGrid Name="DGItems" 
                   AutoGenerateColumns="False" 
                   IsReadOnly="True" 
-                  Margin="10" 
+                  Margin="10"
+                  SelectionChanged="DGItems_SelectionChanged"
                   Grid.Row="0" 
                   Grid.RowSpan="2"
                   Grid.Column="1">
@@ -141,6 +142,17 @@
             FontWeight="Bold"
             Style="{StaticResource CustomButtonStyle}"
             />
+                <Button Content="Изменить"
+                        Name="ChangeBtn"
+                        Click="ChangeBtn_Click"
+                        Margin="10,0,0,0"
+            MinHeight="30"
+            FontSize="16"
+            VerticalAlignment="Center"
+            MinWidth="100"
+            FontWeight="Bold"
+            Style="{StaticResource CustomButtonStyle}"
+            />
                 <Button Content="Удалить"
                         Name="DelBtn"
                         Click="DelBtn_Click"
@@ -157,7 +169,9 @@
                     MinHeight="40"
                     Grid.Column="0"
                     Grid.Row="3"
-                    HorizontalAlignment="Center"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Left"
+                    Margin="20,0,0,0"
                     VerticalAlignment="Center"
                     Name="HistoryGo"
                     Click="HistoryGo_Click">
