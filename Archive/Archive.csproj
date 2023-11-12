@@ -75,6 +75,7 @@
     <Compile Include="AppFiles\DBConnect.cs" />
     <Compile Include="AppFiles\EditDataObject.cs" />
     <Compile Include="AppFiles\FrameApp.cs" />
+    <Compile Include="AppFiles\IssuedDocument.cs" />
     <Compile Include="DBModel\Department.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
@@ -137,11 +138,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ArchivariusPages\UserArchFiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Authorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\NoteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\UserPages\FilesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UserPages\UserHistoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -159,11 +172,20 @@
     <Compile Include="Pages\ArchivariusPages\EditFilePage.xaml.cs">
       <DependentUpon>EditFilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ArchivariusPages\UserArchFiles.xaml.cs">
+      <DependentUpon>UserArchFiles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NoteWindow.xaml.cs">
+      <DependentUpon>NoteWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\UserPages\FilesPage.xaml.cs">
       <DependentUpon>FilesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserPages\UserHistoryPage.xaml.cs">
+      <DependentUpon>UserHistoryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

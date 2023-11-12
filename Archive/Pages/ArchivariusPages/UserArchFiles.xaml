@@ -1,4 +1,4 @@
-﻿<Page x:Class="Archive.Pages.ArchivariusPages.ArchFilesPage"
+﻿<Page x:Class="Archive.Pages.ArchivariusPages.UserArchFiles"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Archive.Pages.ArchivariusPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Список документов">
+      Title="UserArchFiles">
 
     <Grid>
         <Grid>
@@ -132,30 +132,19 @@
             Orientation="Horizontal"
             HorizontalAlignment="Right"
             VerticalAlignment="Center">
-                <Button Content="Добавить"
-                        Name="AddBtn"
-                        Click="AddBtn_Click"
+                <Button Content="Запросить"
+                        Name="TakeBtn"
+                        Click="TakeBtn_Click"
             MinHeight="30"
             FontSize="16"
             VerticalAlignment="Center"
             MinWidth="100"
             FontWeight="Bold"
             Style="{StaticResource CustomButtonStyle}"
-            />
-                <Button Content="Изменить"
-                        Name="ChangeBtn"
-                        Click="ChangeBtn_Click"
-                        Margin="10,0,0,0"
-            MinHeight="30"
-            FontSize="16"
-            VerticalAlignment="Center"
-            MinWidth="100"
-            FontWeight="Bold"
-            Style="{StaticResource CustomButtonStyle}"
-            />
-                <Button Content="Удалить"
-                        Name="DelBtn"
-                        Click="DelBtn_Click"
+            Margin="10,0,10,0" />
+                <Button Content="История документов"
+                        Name="HistoryBtn"
+                        Click="HistoryBtn_Click"
             MinHeight="30"
             FontSize="16"
             VerticalAlignment="Center"
@@ -164,48 +153,7 @@
             Style="{StaticResource CustomButtonStyle}"
             Margin="10,0,10,0" />
             </StackPanel>
-            <Button Content="История выдачи документов" 
-                    MinWidth="200" 
-                    MinHeight="40"
-                    Grid.Column="0"
-                    Grid.Row="3"
-                    
-                    HorizontalAlignment="Center"
-                    Margin="20,0,0,0"
-                    VerticalAlignment="Center"
-                    Name="HistoryGo"
-                    Click="HistoryGo_Click">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="#007ACC" />
-                        <!-- Цвет фона -->
-                        <Setter Property="Foreground" Value="White" />
-                        <!-- Цвет текста -->
-                        <Setter Property="FontFamily" Value="Arial" />
-                        <!-- Шрифт -->
-                        <Setter Property="FontSize" Value="16" />
-                        <!-- Размер шрифта -->
-                        <Setter Property="BorderThickness" Value="2" />
-                        <!-- Толщина границы -->
-                        <Setter Property="BorderBrush" Value="#005BA1" />
-                        <!-- Цвет границы -->
-                        <Setter Property="Padding" Value="10,5" />
-                        <!-- Отступы внутри кнопки -->
-                        <Setter Property="Cursor" Value="Hand" />
-                        <!-- Изменение курсора при наведении -->
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#005BA1" />
-                                <!-- Изменение цвета фона при наведении мыши -->
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="#00498E" />
-                                <!-- Изменение цвета фона при нажатии кнопки -->
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
+            
         </Grid>
     </Grid>
 </Page>

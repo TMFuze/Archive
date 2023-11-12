@@ -1,4 +1,5 @@
 ﻿using Archive.AppFiles;
+using Archive.Pages.ArchivariusPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,7 +60,9 @@ namespace Archive.Pages
                                     "Уведомление",
                                     MessageBoxButton.OK,
                                     MessageBoxImage.Information);
-                                FrameApp.frmObj.Navigate(new Pages.UserPages.FilesPage());
+                                UserArchFiles welcomePage = new UserArchFiles(userObj.Id);
+                                FrameApp.frmObj.Navigate(welcomePage);
+                                
 
                                 break;
                             case 2:

@@ -18,5 +18,78 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
+
+        <DataGrid Grid.Row="0"
+                  Grid.RowSpan="2"
+                  Name="HistoryDG"
+                  Grid.Column="2"
+                  AutoGenerateColumns="False" 
+                  ColumnWidth="Auto"
+                  IsReadOnly="True" 
+                  Margin="10"
+                  SelectionChanged="HistoryDG_SelectionChanged">
+
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Индекс"
+                                    Width="Auto"
+                                    Binding="{Binding id}"  />
+                <DataGridTextColumn Header="Номер документа"
+                                    Width="Auto"
+                                    Binding="{Binding Document.Number}"  />
+                <DataGridTextColumn Header="ФИО получателя"
+                                    Width="Auto"
+                                    Binding="{Binding User.FIO}"  />
+                <DataGridTextColumn Header="Дата получения"
+                                    Width="Auto"
+                                    Binding="{Binding DateOfIssue}"  />
+                <DataGridTextColumn Header="Дата возврата"
+                                    Width="Auto"
+                                    Binding="{Binding ReturnDate}"  />
+                <DataGridTextColumn Header="Примечание"
+                                    Width="Auto"
+                                    Binding="{Binding Note}"  />
+                
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Orientation="Vertical">
+            <TextBlock Text="Поиск" HorizontalAlignment="Center" FontSize="25" />
+
+            <TextBox Name="SearchBox" Grid.Row="1" Grid.Column="0" Margin="5" Width="200" Height="30" FontSize="16"
+                 VerticalAlignment="Center" HorizontalAlignment="Center" KeyUp="SearchBox_KeyUp">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Padding" Value="5" />
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter Property="Padding" Value="5, 5, 30, 5" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+            Grid.Column="1"
+            Orientation="Horizontal"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center">
+            
+            
+            <Button Content="Удалить"
+                        Name="DelBtn"
+                    Click="DelBtn_Click"
+                        
+            MinHeight="30"
+            FontSize="16"
+            VerticalAlignment="Center"
+            MinWidth="100"
+            FontWeight="Bold"
+            Style="{StaticResource CustomButtonStyle}"
+            Margin="10,0,10,0" />
+        </StackPanel>
+
     </Grid>
 </Page>
